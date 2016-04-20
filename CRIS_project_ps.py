@@ -1,8 +1,17 @@
+
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 20 13:30:53 2016
+
+Website: USDA-CRIS scraper, http://portal.nifa.usda.gov/web/crisprojectpages/ + links 
+
+@author: Paul Sirma
+"""
+
+
 import mechanize
-from lxml import etree
-import lxml.html
 import sys, re, random
-from huTools import structured
 import os,csv
 from StringIO import StringIO
 from urllib2 import HTTPError
@@ -38,7 +47,7 @@ strand = re.compile('&amp;')
        
 path = 'C:\Users\psirma\Desktop\Personal.Projects\python\usda_scraper'.replace("\\" , "/")
 # links = open('g:/usda_data/cris/project_html_links.txt').read().split('\n')
-links = csv.reader(file(path+'/project_html_links_ps.csv','rb'))
+links = csv.reader(file(path+'/project_html_links_v2.csv','rb'))
 
 # proxy_handler = urllib2.ProxyHandler({})
 # opener = urllib2.build_opener(proxy_handler)
